@@ -54,6 +54,7 @@ public class CountOddRunnableImpl implements Runnable{
         }
         // 3个数字都是奇数则保存结果
         String threadName = Thread.currentThread().getName();
+        // AtomicInteger用Integer代替也行，不过效率也高不了多少
         AtomicInteger value = resultMap.putIfAbsent(threadName, new AtomicInteger(1));
         if (Objects.nonNull(value)) {
             value.incrementAndGet();
