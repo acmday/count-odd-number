@@ -47,7 +47,7 @@ public class CountOddRunnableImpl implements Runnable{
         for (int i = 0; i < NUMBER_COUNT; i++) {
             // 生成随机数
             int value = RANDOM.nextInt();
-            // 判断value是否是基偶数，如果3个数中有一个数字是偶数，则直接返回
+            // 判断value是否是偶数，如果3个数中有一个数字是偶数，则直接返回
             if(Objects.equals(0, value & 1 )) {
                 return;
             }
